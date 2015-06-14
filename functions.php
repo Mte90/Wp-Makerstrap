@@ -25,10 +25,10 @@ if ( function_exists( 'register_sidebar' ) ) {
 	    'id' => 'sidebar-1',
 	    'name' => 'Sidebar',
 	    'class' => '',
-	    'before_widget' => '<div id="%1$s" class="panel panel-info widget %2$s">'."\n",
-	    'after_widget' => '</span></div>'."\n",
+	    'before_widget' => '<article id="%1$s" class="panel panel-info widget %2$s">'."\n",
+	    'after_widget' => '</section></article>'."\n",
 	    'before_title' => '<h4 class="panel-heading">'."\n",
-	    'after_title' => '</h4><span class="panel-content">'."\n",
+	    'after_title' => '</h4><section class="panel-content">'."\n",
 	) );
 }
 
