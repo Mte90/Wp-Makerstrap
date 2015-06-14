@@ -85,6 +85,7 @@ blockquote.right {
 }
 .well-light {
 	padding:0;
+	margin-left: -16px;
 }
 .well-light .breadcrumb {
 	margin-bottom:0;
