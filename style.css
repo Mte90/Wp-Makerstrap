@@ -64,6 +64,8 @@ blockquote.right {
 	width: 33%;
 	float: right;
 }
+/*Wordpress editor styles end*/
+
 .panel .panel-heading {
 	margin-top:0;
 }
@@ -75,4 +77,9 @@ blockquote.right {
 	margin-left:-20px;
 	margin-right:-20px;
 }
-/*Wordpress editor styles end*/
+.well-light {
+	padding:0;
+}
+.well-light .breadcrumb {
+	margin-bottom:0;
+}

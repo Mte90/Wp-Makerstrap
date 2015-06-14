@@ -151,15 +151,15 @@ endif;
 
 //From https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress
 function bootstrapwp_breadcrumbs() {
-	$home = __( 'Home', 'bootstrapwp' ); // text for the 'Home' link
+	$home = __( 'Home' ); // text for the 'Home' link
 	$before = '<li class="active">'; // tag before the current crumb
 	$sep = '';
 	$after = '</li>'; // tag after the current crumb
 	if ( !is_home() && !is_front_page() || is_paged() ) {
-		echo '<ul class="breadcrumb">';
+		echo '<div class="well well-light"><ul class="breadcrumb">';
 		global $post;
 		$homeLink = home_url();
-		echo '<li><a href="' . $homeLink . '">' . $home . '</a></li> ';
+		echo '<li><i class="fa fa-caret-square-o-right"></i>&nbsp;<a href="' . $homeLink . '">' . $home . '</a></li> ';
 		if ( is_category() ) {
 			global $wp_query;
 			$cat_obj = $wp_query->get_queried_object();
@@ -169,7 +169,7 @@ function bootstrapwp_breadcrumbs() {
 			if ( $thisCat->parent != 0 ) {
 				echo get_category_parents( $parentCat, true, $sep );
 			}
-			echo $before . __( 'Archive by category', 'bootstrapwp' ) . ' "' . single_cat_title( '', false ) . '"' . $after;
+			echo $before . __( 'Archive by category' ) . ' "' . single_cat_title( '', false ) . '"' . $after;
 		} elseif ( is_day() ) {
 			echo '<li><a href="' . get_year_link( get_the_time( 'Y' ) ) . '">' . get_the_time(
 				'Y'
@@ -227,16 +227,16 @@ function bootstrapwp_breadcrumbs() {
 			}
 			echo $before . get_the_title() . $after;
 		} elseif ( is_search() ) {
-			echo $before . __( 'Search results for', 'bootstrapwp' ) . ' "' . get_search_query() . '"' . $after;
+			echo $before . __( 'Search results for' ) . ' "' . get_search_query() . '"' . $after;
 		} elseif ( is_tag() ) {
-			echo $before . __( 'Posts tagged', 'bootstrapwp' ) . ' "' . single_tag_title( '', false ) . '"' . $after;
+			echo $before . __( 'Posts tagged' ) . ' "' . single_tag_title( '', false ) . '"' . $after;
 		} elseif ( is_author() ) {
 			global $author;
 			$userdata = get_userdata( $author );
-			echo $before . __( 'Articles posted by', 'bootstrapwp' ) . ' ' . $userdata->display_name . $after;
+			echo $before . __( 'Articles posted by' ) . ' ' . $userdata->display_name . $after;
 		} elseif ( is_404() ) {
-			echo $before . __( 'Error 404', 'bootstrapwp' ) . $after;
+			echo $before . __( 'Error 404') . $after;
 		}
-		echo '</ul>';
+		echo '</ul></div>';
 	}
 }
