@@ -66,6 +66,12 @@ blockquote.right {
 }
 /*Wordpress editor styles end*/
 
+.navbar-brand {
+	background:url('css/logo.png');
+	background-repeat:no-repeat;
+	color:transparent !important;
+	width:320px;
+}
 .panel .panel-heading {
 	margin-top:0;
 }
