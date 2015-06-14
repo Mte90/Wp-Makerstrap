@@ -90,3 +90,6 @@ blockquote.right {
 .well-light .breadcrumb {
 	margin-bottom:0;
 }
+h2.alert a {
+	color:white;
+}
