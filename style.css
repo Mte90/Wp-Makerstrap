@@ -93,3 +93,7 @@ blockquote.right {
 h2.alert a {
 	color:white;
 }
+.form-allowed-tags code {
+	white-space:normal;
+	display:block;
+}
