@@ -97,3 +97,7 @@ h2.alert a {
 	white-space:normal;
 	display:block;
 }
+.media-list .comment {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
