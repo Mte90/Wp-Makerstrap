@@ -39,12 +39,6 @@ if ( !function_exists( 'bootstrap_setup' ) ):
 
 	function bootstrap_setup() {
 
-		add_action( 'init', 'register_menu' );
-
-		function register_menu() {
-			register_nav_menu( 'top-bar', 'Bootstrap Top Menu' );
-		}
-
 		class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 			function start_lvl( &$output, $depth = 0, $args = array() ) {
